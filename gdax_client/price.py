@@ -143,7 +143,6 @@ class GdaxPriceClient:
         #NOTES: quantize is what allows us to specify decimal place
 
         def _load_book(side, new_side):
-
             for order in side:
                 new_side[Decimal(order[0]).quantize(Decimal('1.00000000'))] = Decimal(order[1])
 
@@ -173,7 +172,7 @@ class GdaxPriceClient:
 
     def _update_book(self, orderb_side, price, amount):
         '''
-        update_book process (utilizes SortedContainer)
+        update_book process (utilizes SortedDict)
         * if amount in incoming update = 0 -> remove
         * else if price already exists in book update amount
         * else order does not exist -> add

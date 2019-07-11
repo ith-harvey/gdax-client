@@ -20,6 +20,12 @@ cd gdax-client
 pip3 install -r requirements.txt
 ```
 
+## Testing
+Run the following after performing Installation
+```
+./install-dev.sh
+./test.sh
+```
 
 ## License
 
